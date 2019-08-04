@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import styles from "./Colors.css";
+import styles from "./ColorsComponent.css";
 import { CSSTransition } from "react-transition-group";
 
 class Colors extends Component {

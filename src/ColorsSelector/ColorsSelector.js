@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import Colors from "../Colors/Colors";
+import ColorsComponent from "./ColorsComponent/ColorsComponent.js";
 import styles from "./ColorsSelector.css";
 class ColorsSelector extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class ColorsSelector extends Component {
       <div className={styles.colorsSelector}>
         {colors.map((color, i) => {
           return (
-            <Colors
+            <ColorsComponent
               key={i}
               color={color}
               select={this.state.select}
