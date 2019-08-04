@@ -13,7 +13,7 @@ class Colors extends Component {
       border: "#00000000 solid 1px"
     };
     return (
-      <CSSTransition>
+      <CSSTransition timeout={200}>
         <div
           style={select === index ? null : hideBorder}
           className={styles.active}
