@@ -1,0 +1,46 @@
+.color {
+  background: #333;
+  width: 25px;
+  height: 25px;
+  border: #333 solid 1px;
+  margin: 5px 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.radio {
+  display: none;
+}
+
+.active {
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  border: #979797 solid 1px;
+  margin: 1px 5px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 400ms linear;
+  -webkit-transition: all 400ms linear;
+  -moz-transition: all 400ms linear;
+  -ms-transition: all 400ms linear;
+  -o-transition: all 400ms linear;
+}
+.active label {
+  margin: 0;
+  transform: translate(14%, 14%);
+  width: 25px;
+  height: 25px;
+  border: none;
+  transition: all 400ms linear;
+  -webkit-transition: all 400ms linear;
+  -moz-transition: all 400ms linear;
+  -ms-transition: all 400ms linear;
+  -o-transition: all 400ms linear;
+}
