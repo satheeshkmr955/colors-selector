@@ -2,7 +2,7 @@
   background: #333;
   width: 20px;
   height: 20px;
-  border: #333 solid 1px;
+  border: #979797 solid 1px;
   margin: 5px 4px;
   border-radius: 50%;
   -webkit-border-radius: 50%;
@@ -33,18 +33,21 @@
   -o-transition: all 300ms linear;
 }
 .active label {
-  margin: 0 4px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  transform: translate(1%, 17%);
-  -webkit-transform: translate(1%, 17%);
-  -moz-transform: translate(1%, 17%);
-  -ms-transform: translate(1%, 17%);
-  -o-transform: translate(1%, 17%);
+  margin: 0 3px;
+  width: 18px;
+  height: 18px;
+  transform: translate(3%, 18%);
+  -webkit-transform: translate(3%, 18%);
+  -moz-transform: translate(3%, 18%);
+  -ms-transform: translate(3%, 18%);
+  -o-transform: translate(3%, 18%);
   transition: all 300ms linear;
   -webkit-transition: all 300ms linear;
   -moz-transition: all 300ms linear;
   -ms-transition: all 300ms linear;
   -o-transition: all 300ms linear;
+}
+
+.hideBorder {
+  border: #00000000 solid 1px;
 }

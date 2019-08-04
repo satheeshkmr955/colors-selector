@@ -5,7 +5,15 @@ import ColorsSelector from "./ColorsSelector/ColorsSelector";
 function App() {
   return (
     <div className="App">
-      <ColorsSelector colors={["#333", "red", "green"]} />
+      <div>
+        <ColorsSelector colors={["#333", "red", "green"]} />
+      </div>
+      <div>
+        <ColorsSelector colors={["pink", "blue", "white"]} />
+      </div>
+      <div>
+        <ColorsSelector colors={["orange", "yellow", "violet"]} />
+      </div>
     </div>
   );
 }

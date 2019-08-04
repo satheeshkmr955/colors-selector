@@ -9,16 +9,23 @@ class Colors extends Component {
     const cssStyles = {
       background: color
     };
-    const hideBorder = {
-      border: "#00000000 solid 1px"
-    };
     return (
       <CSSTransition timeout={200}>
         <div
-          style={select === index ? null : hideBorder}
-          className={styles.active}
+          className={
+            select === index
+              ? styles.active
+              : [styles.active, styles.hideBorder].join(" ")
+          }
         >
-          <label style={cssStyles} className={styles.color}>
+          <label
+            style={cssStyles}
+            className={
+              select === index
+                ? [styles.color, styles.hideBorder].join(" ")
+                : styles.color
+            }
+          >
             <input
               style={cssStyles}
               className={select === index ? styles.radio : styles.radio}
