@@ -6,16 +6,17 @@ class ColorsSelector extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      select: 0
+      selectColor: null
     };
   }
 
-  onChangeHandler = index => {
-    this.setState({ select: index });
+  onChangeHandler = selectColor => {
+    this.setState({ selectColor });
   };
 
   render() {
-    let { colors } = this.props;
+    let { colors, changeColor, defaultColor } = this.props;
+    let { selectColor } = this.state;
     return (
       <div className={styles.colorsSelector}>
         {colors.map((color, i) => {
@@ -23,9 +24,11 @@ class ColorsSelector extends Component {
             <ColorsComponent
               key={i}
               color={color}
-              select={this.state.select}
-              index={i}
+              selectColor={selectColor ? selectColor : defaultColor}
               changeValue={this.onChangeHandler}
+              onChange={event => {
+                changeColor(event, i, color);
+              }}
             />
           );
         })}
@@ -35,7 +38,9 @@ class ColorsSelector extends Component {
 }
 
 ColorsSelector.propTypes = {
-  colors: PropTypes.array
+  colors: PropTypes.array,
+  changeColor: PropTypes.func,
+  defaultColor: PropTypes.string
 };
 
 export default ColorsSelector;

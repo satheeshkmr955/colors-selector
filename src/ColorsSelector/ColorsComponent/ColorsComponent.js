@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styles from "./ColorsComponent.css";
 import { CSSTransition } from "react-transition-group";
-
+import { bounceIn } from "animate.css";
 class Colors extends Component {
   render() {
-    let { color, select, index, changeValue } = this.props;
+    let { color, selectColor, changeValue, onChange } = this.props;
     const cssStyles = {
       background: color
     };
@@ -13,28 +13,29 @@ class Colors extends Component {
       <CSSTransition timeout={200}>
         <div
           className={
-            select === index
-              ? styles.active
+            color === selectColor
+              ? [styles.active, bounceIn].join(" ")
               : [styles.active, styles.hideBorder].join(" ")
           }
+          onChange={onChange}
         >
           <label
             style={cssStyles}
             className={
-              select === index
+              color === selectColor
                 ? [styles.color, styles.hideBorder].join(" ")
-                : styles.color
+                : [styles.color].join(" ")
             }
           >
             <input
               style={cssStyles}
-              className={select === index ? styles.radio : styles.radio}
+              className={color === selectColor ? styles.radio : styles.radio}
               type="radio"
               id={color}
               value={color}
-              checked={select === index ? true : false}
+              checked={color === selectColor}
               onChange={() => {
-                changeValue(index);
+                changeValue(color);
               }}
             />
           </label>
@@ -46,9 +47,9 @@ class Colors extends Component {
 
 Colors.propTypes = {
   color: PropTypes.string,
-  select: PropTypes.number,
-  index: PropTypes.number,
-  changeValue: PropTypes.func
+  selectColor: PropTypes.string,
+  changeValue: PropTypes.func,
+  onChange: PropTypes.func
 };
 
 export default Colors;
