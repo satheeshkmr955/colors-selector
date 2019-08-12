@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import "./App.css";
+import styles from "./App.css";
 import ColorsSelector from "./ColorsSelector/ColorsSelector";
 
 class App extends Component {
   changeColor = (event, i, color) => {};
   render() {
     return (
-      <div className="App">
+      <div className={styles.App}>
         <div>
           <ColorsSelector
             colors={["#333", "red", "green"]}
